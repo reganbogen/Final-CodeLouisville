@@ -1,11 +1,9 @@
-var http = require('express');
-var app = express()
+var mongojs = require('mongojs')
 
-//use 'static' middleware
-app.use(express.static(__dirname + "/app"))
+var db = mongojs.connect("mongodb://localhost/squallispuppeteers", ['squallis'])
 
-app.get('/', function(req, res) {
-	res.send("Hello World")
+app.get('/squallis', function(req, res) {
+	db.todo.find({}, function(err, docs) {
+		res.send(docs)
+	})
 })
-
-app.listen(8000)
