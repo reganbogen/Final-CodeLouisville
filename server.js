@@ -1,9 +1,10 @@
-var mongojs = require('mongojs')
+var bodyParser = require('body-parser')
 
-var db = mongojs.connect("mongodb://localhost/squallispuppeteers", ['squallis'])
+app.use(bodyParser.json())
 
-app.get('/squallis', function(req, res) {
-	db.todo.find({}, function(err, docs) {
+app.post('/todo', function(req, res) {
+	db.todo.insert(req.body, function(err,docs) {
 		res.send(docs)
-	})
+		}
+	)
 })
