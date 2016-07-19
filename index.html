@@ -1,0 +1,30 @@
+<html ng-app="todoApp">
+<head>
+	<title>Touring Show List</title>
+	<script type="text/javascript" src = "bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="todoCtrl">
+	<div>
+		<input type ="text" ng-model="instance.title"/>
+		<input type ="number" ng model="instance.priority"/>
+		<button ng-click = "add()">Add</button>
+	</div>
+	<ul ng-repeat= "todo in todos | orderBy:'priority'">
+		<li>{{todo.title}}</li>
+	</ul>
+</body>
+<script , type="text/javascript">
+var app = angular.module('todoApp', []);
+app.controller('todoCtrl' function($scope){
+	$scope.instance = {};
+	$scope.todos = [
+		{title: 'A', priority: 3},
+		{title: 'B', priority: 4},
+		{title: 'C', priority: 1}];
+	$scope.add = function(){
+		$scope.todos.push($scope.instance);
+		$scope.instance = {};
+	};
+});
+</script>
+</html>
