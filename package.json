@@ -5,4 +5,7 @@
     "express": "3.x",
     "mongojs": "^2.4.0"
   }
+  {
+  	"directory": "app/bower_components"
+  }
 }
