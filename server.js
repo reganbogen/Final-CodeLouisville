@@ -4,6 +4,14 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/squallispuppeteers');
 
+db.on('error', function callback () {
+	console.log("Connection error");
+});
+
+db.once('open', function callback () {
+	console.log("Mongo working!");
+});
+
 app.get('/ping', function(req, res) {
 	res.send({ping:'Hello this is server and I am alive!'});
 });
