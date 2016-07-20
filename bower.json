@@ -1,0 +1,18 @@
+{
+  "name": "squallispuppeteers",
+  "description": "squallis site",
+  "main": "index.js",
+  "authors": [
+    "regan layman"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/reganlayman/Squallis_Puppeteers",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "toastr": "^2.1.2",
+    "angular": "^1.5.7",
+    "angular-resource": "^1.5.7",
+    "angular-route": "^1.5.7"
+  }
+}
