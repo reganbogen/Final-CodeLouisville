@@ -1,0 +1,23 @@
+{
+  "name": "squallispuppeteers",
+  "version": "1.0.0",
+  "description": "squallis site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reganlayman/Squallis_Puppeteers.git"
+  },
+  "author": "regan layman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reganlayman/Squallis_Puppeteers/issues"
+  },
+  "homepage": "https://github.com/reganlayman/Squallis_Puppeteers#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta4"
+  }
+}
