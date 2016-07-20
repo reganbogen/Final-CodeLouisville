@@ -25,6 +25,8 @@ app.use(stylus.middleware(
 ));
 app.use(express.static(__dirname + '/public'));
 
+mongoose.connect('mongodb://localhost/squallispuppeteers');
+
 app.get('/partials/:partialPath', function(req, res) {
 	res.render('partials/' + req.params.partialPath);
 })
