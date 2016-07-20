@@ -11,6 +11,12 @@ function compile(str, path) {
 
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'pug');
+app.use(stylus.middleware(
+	{
+		src: __dirname + '/public',
+		compile: compile
+	}
+));
 
 app.get('*', function(req, res) {
 	res.render('index');
