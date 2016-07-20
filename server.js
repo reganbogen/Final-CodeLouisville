@@ -6,3 +6,6 @@ var app = express();
 
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'pug');
+app.get('*', function(req, res) {
+	res.render('index');
+});
