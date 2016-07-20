@@ -26,6 +26,10 @@ app.use(stylus.middleware(
 app.use(express.static(__dirname + '/public'));
 
 mongoose.connect('mongodb://localhost/squallispuppeteers');
+db.on('error', console.error.bind(console,'connection error...'));
+db.once('open', function callback() {
+  console.log('squallispuppeteers db opened');
+});
 
 app.get('/partials/:partialPath', function(req, res) {
 	res.render('partials/' + req.params.partialPath);
