@@ -1,5 +1,5 @@
 angular.module('app').controller('mainCtrl', function($scope) {
-	$scope.programming = [
+	$scope.programmings = [
 	{name: 'Rage-O-Saurus Rex' , show: true , capacity: "250" , workshop: "false" },
 	{name: 'Food Fight' , show: true , capacity: "300" , workshop: false},
 	{name: 'Tricky FOx' , show: true , capacity: "60" , workshop: false},

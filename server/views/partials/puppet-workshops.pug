@@ -1,3 +1,7 @@
 .panel.panel-primary
 	.panel-heading.text-center Puppet Workshops
-	.panel-body Body Goes Here
+	.panel-body 
+		.row(ng-repeat="programming in programmings | filter:{workshop:true}")
+			.col-md-12 {{programming-name}}
+			//.col-md-3 {{course.published | date:'MMM d'}} 25%
+			//.col-md-9 {{course.name}} 75%
