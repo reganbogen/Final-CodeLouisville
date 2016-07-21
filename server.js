@@ -1,7 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var passport = require('passport');
-LocalStrategy = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local').Strategy;
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -22,12 +22,11 @@ passport.use(new LocalStrategy(
 			} else {
 				return done(null, false);
 			}
-		}
 		})
 	}
 ));
 
-passport.serializeUser (function(user, done) {
+passport.serializeUser(function(user, done) {
 	if(user) {
 		done(null, user._id);
 	}
