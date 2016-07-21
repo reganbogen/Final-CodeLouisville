@@ -43,7 +43,9 @@ app.get('/partials/:partialPath', function(req, res) {
 })
 
 app.get('*', function(req, res) {
-	res.render('index');
+	res.render('index', {
+		mongoMessage: mongoMessage
+	});
 });
 
 var port = 3030;
