@@ -1,6 +1,6 @@
 .panel.panel-primary
 	.panel-heading.text-center Puppet Shows
 	.panel-body 
-		.row(ng-repeat="programming in programmings | filter:{show:true}")
-			.col-md-12 {{programming-name}}
+		.row(ng-repeat="course in courses | filter:{show:true}")
+			.col-md-12 {{course.name}}
 
