@@ -10,9 +10,11 @@ module.exports = function(app, config) {
 
 	app.set('views', config.rootPath + '/server/views');
 	app.set('view engine', 'pug');
+	app.use(logger('dev'));
+	app.user(cookieParser());
 	app.use(bodyParser.urlencoded({extended: true}));
 	app.use(bodyParser.json());
-	app.use(logger('dev'));
+	app.use(session({secret: 'Squallis Puppeteers Puppets',resave:false,saveUninitialized:false}));
 	app.use(stylus.middleware(
 		{
 			src: config.rootPath + '/public',
