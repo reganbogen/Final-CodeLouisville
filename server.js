@@ -26,6 +26,7 @@ app.use(stylus.middleware(
 app.use(express.static(__dirname + '/public'));
 
 mongoose.connect('mongodb://localhost/squallispuppeteers');
+var db = mongoose.connection;
 db.on('error', console.error.bind(console,'connection error...'));
 db.once('open', function callback() {
   console.log('squallispuppeteers db opened');
