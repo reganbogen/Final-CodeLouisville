@@ -11,7 +11,7 @@ module.exports = function(config) {
 	var userSchema = mongoose.Schema({
 		firsName: String, 
 		lastName: String, 
-		userName: String
+		username: String
 	});
 	var User = mongoose.model('User', userSchema);
 
