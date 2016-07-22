@@ -1,5 +1,9 @@
 body {
   padding-top: 69px;
+  background: url("goog.jpg");
+}
+.navbar-brand {
+  background-color: #000080;
 }
 .navbar-header a.navbar-brand {
   margin-top: -15px;
@@ -8,15 +12,12 @@ body {
 .navbar-header a.navbar-brand h6 {
   color: #ccc;
 }
-.navbar-header {
-  background-color: #f00;
-}
 footer {
   padding-left: 15px;
   padding-right: 15px;
 }
 footer p {
-  border-top: 1px solid #808080;
+  border-top: 1px solid #d7e0e2;
 }
 .navbar-form .form-group {
   margin-left: 10px;
@@ -34,5 +35,5 @@ footer p {
   top: 70px;
 }
 .toast-success {
-  background-color: #f00;
+  background-color: #13987e;
 }
