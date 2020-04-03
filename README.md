@@ -1,2 +1,2 @@
-# Squallis_Puppeteers
-update on the Squallis website as Code Louisville Project
+# final project
+basic site with signup ability and database connection
